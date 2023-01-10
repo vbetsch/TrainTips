@@ -2,6 +2,10 @@ package com.example.traintips.core
 
 import java.util.Date
 
+data class ConfigBean (
+    var api_key: String
+)
+
 data class CoordBean (
     var lon :Double,
     var lat :Double
