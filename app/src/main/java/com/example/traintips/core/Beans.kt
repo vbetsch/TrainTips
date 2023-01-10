@@ -26,7 +26,8 @@ data class StationBean (
 data class CityBean (
     var id :String,
     var name :String,
-    var location :CoordBean
+    var location :CoordBean,
+    var zip :Int
 )
 
 data class TrainBean (
