@@ -1,14 +1,15 @@
 package com.example.traintips
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 
-private const val MENU_ID_ELEMENTA = 1;
-private const val MENU_ID_ELEMENTB = 2;
-private const val MENU_ID_ELEMENTC = 3;
+private const val MENU_ID_MY_STATION = 1;
+private const val MENU_ID_LEAVE_NOW = 2;
+private const val MENU_ID_BOOK_TRIP = 3;
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,17 +19,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menu.add(0, MENU_ID_ELEMENTA, 1, "element A");
-        menu.add(0, MENU_ID_ELEMENTB, 2, "element B");
-        menu.add(0, MENU_ID_ELEMENTC, 3, "element C");
+        menu.add(0, MENU_ID_MY_STATION, 1, "My Station");
+        menu.add(0, MENU_ID_LEAVE_NOW, 2, "Leave Now");
+        menu.add(0, MENU_ID_BOOK_TRIP, 3, "Book A Trip");
         return super.onCreateOptionsMenu(menu);
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            MENU_ID_ELEMENTA -> Toast.makeText(this, "$item", Toast.LENGTH_LONG).show();
-            MENU_ID_ELEMENTB -> Toast.makeText(this, "$item", Toast.LENGTH_LONG).show();
-            MENU_ID_ELEMENTC -> Toast.makeText(this, "$item", Toast.LENGTH_LONG).show();
+            MENU_ID_MY_STATION -> startActivity(Intent(this, MyStationActivity::class.java));
+            MENU_ID_LEAVE_NOW -> startActivity(Intent(this, LeaveNowActivity::class.java));
+            MENU_ID_BOOK_TRIP -> startActivity(Intent(this, BookTripActivity::class.java));
         }
         return super.onOptionsItemSelected(item)
     }
