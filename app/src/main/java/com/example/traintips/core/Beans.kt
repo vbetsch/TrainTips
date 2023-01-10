@@ -1,4 +1,4 @@
-package com.example.traintrips.core
+package com.example.traintips.core
 
 import java.util.Date
 

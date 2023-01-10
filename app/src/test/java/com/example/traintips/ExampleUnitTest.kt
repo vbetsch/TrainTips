@@ -1,4 +1,4 @@
-package com.example.traintrips
+package com.example.traintips
 
 import org.junit.Test
 
