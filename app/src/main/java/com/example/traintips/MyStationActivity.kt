@@ -2,10 +2,12 @@ package com.example.traintips
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.traintips.databinding.ActivityMyStationBinding
 
 class MyStationActivity : AppCompatActivity() {
+    private val binding by lazy { ActivityMyStationBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_station)
+        setContentView(binding.root)
     }
 }

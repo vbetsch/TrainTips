@@ -6,16 +6,18 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.example.traintips.databinding.ActivityMainBinding
 
 private const val MENU_ID_MY_STATION = 1;
 private const val MENU_ID_LEAVE_NOW = 2;
 private const val MENU_ID_BOOK_TRIP = 3;
 
 class MainActivity : AppCompatActivity() {
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
